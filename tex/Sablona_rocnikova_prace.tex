@@ -45,16 +45,27 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 \chapter{Základní pojmy} % NÁZVY KAPITOL NEJVYŠŠÍ ÚROVNĚ
 
 \section{Neuron}
-
-	\section{Jádro}
+	\subsection{Jádro}
 		\paragraph{Aktivace}
 		je hodnota mezi nulou a jedničkou $(a=0.73)$. Tahle hodnota určuje míru zapnutosti neuronu. Více aktivované neurony můžou mít větší vliv na neurony v sítí přímo následující. Aktivace neuronů jsou závislé na datech, takže není možné měnit jejich hodnoty přímo.
 		\paragraph{Normalizační funkce}
-		upravuje příchozí signály, tak aby následně vytvořená hodnota zapadala do rozmezí aktivací. Přijdou-li do neuronu 4 signály všechny s maximální hodnotou bude aktivace neuronu velmi blízko 1.
-	\section{Synapse}
+		upravuje příchozí signály, tak aby následně vytvořená hodnota zapadala do rozmezí aktivací. Přijdou-li do neuronu 4 signály všechny s maximální hodnotou, bude aktivace neuronu velmi blízko 1.
+	\subsection{Synapse}
 		\paragraph{Synapse} je spojení mezi dvěma neurony. Toto spojení zajiťuje, že aktivace neuronu v síti je závislá na aktivacích předchozích neuronů.
 		\paragraph{Váha}
 		ovlivňuje spoje mezi neurony. Váhy spojení tvoří dohromady povahu sítě. Z libovolných vstupních dat můžu upravováním síly spojení (synapsí) vyvodit libovolné výstupní data. 
+\section{Síť}
+	Síť se skládá s několik vrstev, které jsou navzájem propojené.
+	\paragraph{Vrstva}
+	je několik neuronů, které se navzájem neovlivňují, ale jsou ovlivněny stejnými neurony a zároveň ovlivňují stejé neurony.
+	\paragraph{Bias}
+	je míra 
+		
+\section{Pohyb dat}
+	\subsection{Vstup}
+		\paragraph{Scaling}
+		je metoda upravení hodnot z našich vstupních dat, tak aby v síti tato data vystupovala pouze jako aktivace. Dobrým příkladem je vstupní hodnota věk. V našich datech se vyskytuje člověk s maximální věkem 100 a minimálním 0. Odpovídající hodnoty aktivace potom budou $100\rightarrow1.0$ a $0\rightarrow0.0$.
+	\subsection{Výstup}
 	
 
 
