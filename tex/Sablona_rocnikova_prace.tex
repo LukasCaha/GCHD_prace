@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[total={16.5cm,25.2cm}, top=2.5cm, left=2.5cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\setlength\parindent{0.5cm} % šířka odsazení prvního řádku odstavce
+\linespread{1.25} % řádkování 1.5 dle MS Word
+
+
+%%% Údaje o práci
+% Název práce v jazyce práce (přesně podle zadání)
+\def\NazevPrace{Regresní neuronové sítě}
+% Jméno autora
+\def\AutorPrace{Lukáš Caha}
+% Třída autora
+\def\TridaAutora{8.M}
+% Školní rok
+\def\SkolniRok{2017/2018}
+% Seminář ve kterém práce vznikla
+\def\Seminar{Seminář z programování}
+% Datum dokončení práce
+\def\DatumDokonceni{\today}
+
+
+%% Definice různých užitečných maker (viz popis uvnitř souboru)
+\include{_makra}
+
+\begin{document}
+
+%% Titulní strana a různé povinné informační strany
+\include{_titulni_strana}
+
+%%% Strana s automaticky generovaným obsahem diplomové práce
+\tableofcontents
+
+\chapter{Úvod}
+Toto je úvod mé ročníkové práce.
+
+\chapter{První kapitola} % NÁZVY KAPITOL NEJVYŠŠÍ ÚROVNĚ
+
+\section{První podnadpis}
+Vítr skoro nefouká a tak by se na první pohled mohlo zdát, že se balónky snad vůbec nepohybují. Jenom tak klidně levitují ve vzduchu. Jelikož slunce jasně září a na obloze byste od východu k západu hledali mráček marně, balónky působí jako jakási fata morgána uprostřed pouště. Zkrátka široko daleko nikde nic, jen zelenkavá tráva, jasně modrá obloha a tři křiklavě barevné pouťové balónky, které se téměř nepozorovatelně pohupují ani ne moc vysoko, ani moc nízko nad zemí. Kdyby pod balónky nebyla sytě zelenkavá tráva, ale třeba suchá silnice či beton, možná by bylo vidět jejich barevné stíny - to jak přes poloprůsvitné barevné balónky prochází ostré sluneční paprsky.
+
+\chapter{Závěr}
+Toto je závěr mé ročníkové práce.
+
+%%% Seznam použité literatury
+\begin{thebibliography}{99}
+
+\bibitem{birge}
+Birge J. R., Wets R. J.-B. (1987): Computing bounds for stochastic programing problems by means of a generalized moment problem. \textit{Mathematics of Operations Research} \textbf{12}, 149-162.
+\end{thebibliography}
+
+%%% Prostor pro přílohy práce
+\chapwithtoc{Přílohy}
+
+\openright
+\end{document}
