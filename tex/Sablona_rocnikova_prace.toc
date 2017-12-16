@@ -1,7 +1,13 @@
 \select@language {czech}
 \contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{3}{chapter.1}
-\contentsline {chapter}{\numberline {2}Prvn\IeC {\'\i } kapitola}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Prvn\IeC {\'\i } podnadpis}{4}{section.2.1}
+\contentsline {chapter}{\numberline {2}Z\IeC {\'a}kladn\IeC {\'\i } pojmy}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Neuron}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}J\IeC {\'a}dro}{4}{section.2.2}
+\contentsline {paragraph}{Aktivace}{4}{section*.2}
+\contentsline {paragraph}{Normaliza\IeC {\v c}n\IeC {\'\i } funkce}{4}{section*.3}
+\contentsline {section}{\numberline {2.3}Synapse}{4}{section.2.3}
+\contentsline {paragraph}{Synapse}{4}{section*.4}
+\contentsline {paragraph}{V\IeC {\'a}ha}{4}{section*.5}
 \contentsline {chapter}{\numberline {3}Z\IeC {\'a}v\IeC {\v e}r}{5}{chapter.3}
-\contentsline {chapter}{Literatura}{6}{chapter*.2}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{7}{chapter*.3}
+\contentsline {chapter}{Literatura}{6}{chapter*.6}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{7}{chapter*.7}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.29)  16 DEC 2017 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.29)  16 DEC 2017 16:51
 entering extended mode
 **./Sablona_rocnikova_prace.tex
 (Sablona_rocnikova_prace.tex
@@ -697,24 +697,24 @@ Kapitola 3.
 ] [7
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (Sablona_rocnikova_prace.aux (_titulni_strana.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `Sablona_rocnikova_prace.out' has not changed
 .
-(rerunfilecheck)             Checksum: CDD7D99CE60AAA2FE0882DDA4707F074;579.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
+(rerunfilecheck)             Checksum: 2FED5442B07EAC34679F3E4D2E8F890F;704.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 9822 strings out of 493333
- 133827 string characters out of 3146978
- 214259 words of memory out of 3000000
- 13246 multiletter control sequences out of 15000+200000
+ 9830 strings out of 493333
+ 133915 string characters out of 3146978
+ 215255 words of memory out of 3000000
+ 13248 multiletter control sequences out of 15000+200000
  13234 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,6n,31p,784b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,6n,31p,697b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ecti1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecbx1728.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
@@ -722,10 +722,12 @@ ec\dpi600\ecbx1728.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX
 \2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Lukas\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1728.pk> <C:\Users\Lukas\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk>
-Output written on Sablona_rocnikova_prace.pdf (8 pages, 92943 bytes).
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk><D:/Mik
+tex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Miktex/fonts/type1/public/ams
+fonts/cm/cmr12.pfb>
+Output written on Sablona_rocnikova_prace.pdf (8 pages, 121507 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
