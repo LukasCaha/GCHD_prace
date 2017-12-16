@@ -11,10 +11,31 @@
 \contentsline {section}{\numberline {2.2}S\IeC {\'\i }\IeC {\v t}}{4}{section.2.2}
 \contentsline {paragraph}{Vrstva}{4}{section*.6}
 \contentsline {paragraph}{Bias}{4}{section*.7}
-\contentsline {section}{\numberline {2.3}Pohyb dat}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Vstup}{4}{subsection.2.3.1}
-\contentsline {paragraph}{Scaling}{4}{section*.8}
+\contentsline {section}{\numberline {2.3}Pohyb dat}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Vstup}{5}{subsection.2.3.1}
+\contentsline {subsubsection}{Typy vstupn\IeC {\'\i }ch dat}{5}{section*.8}
+\contentsline {paragraph}{Tr\IeC {\'e}novac\IeC {\'\i } data}{5}{section*.9}
+\contentsline {paragraph}{Testovac\IeC {\'\i } data}{5}{section*.10}
+\contentsline {paragraph}{Produk\IeC {\v c}n\IeC {\'\i } data}{5}{section*.11}
+\contentsline {paragraph}{Scaling}{5}{section*.12}
 \contentsline {subsection}{\numberline {2.3.2}V\IeC {\'y}stup}{5}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Z\IeC {\'a}v\IeC {\v e}r}{6}{chapter.3}
-\contentsline {chapter}{Literatura}{7}{chapter*.9}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{8}{chapter*.10}
+\contentsline {paragraph}{Back-scaling}{5}{section*.13}
+\contentsline {chapter}{\numberline {3}Vstup}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Design vstupn\IeC {\'\i } vrstvy}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}Scaling}{6}{section.3.2}
+\contentsline {section}{\numberline {3.3}Data}{6}{section.3.3}
+\contentsline {chapter}{\numberline {4}Forward-propagation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Typy s\IeC {\'\i }t\IeC {\'\i }}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Norm\IeC {\'a}ln\IeC {\'\i }}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Deep learning}{7}{subsection.4.1.2}
+\contentsline {chapter}{\numberline {5}Back-propagation}{8}{chapter.5}
+\contentsline {section}{\numberline {5.1}Loss function}{8}{section.5.1}
+\contentsline {chapter}{\numberline {6}Praktick\IeC {\'a} pr\IeC {\'a}ce s PC}{9}{chapter.6}
+\contentsline {section}{\numberline {6.1}Jazyk}{9}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}V\IeC {\'y}vojov\IeC {\'e} prost\IeC {\v r}ed\IeC {\'\i }}{9}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Knihovny}{9}{subsection.6.1.2}
+\contentsline {paragraph}{NumPy}{9}{section*.14}
+\contentsline {section}{\numberline {6.2}Git}{9}{section.6.2}
+\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{10}{chapter.7}
+\contentsline {chapter}{Literatura}{11}{chapter*.15}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{12}{chapter*.16}

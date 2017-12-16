@@ -41,7 +41,6 @@ Neuronové sítě jsou vrcholem lidské práce v oblasti informačních technolo
 
 Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i pro středoškoláky, kteří by chtěli začít se strojovým učením, což je obor zahrnující moderní způsoby práce s umělou inteligencí.
 
-
 \chapter{Základní pojmy} % NÁZVY KAPITOL NEJVYŠŠÍ ÚROVNĚ
 
 \section{Neuron}
@@ -59,15 +58,45 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 	\paragraph{Vrstva}
 	je několik neuronů, které se navzájem neovlivňují, ale jsou ovlivněny stejnými neurony a zároveň ovlivňují stejé neurony.
 	\paragraph{Bias}
-	je míra 
+	je míra vlivu nezávislého na datech. Tato externí síla se stará o vyrovnání sítí s menším počtem neuronů a tím uspoří výpočetní výkon. V překladu je bias šum, který rozostřuje data, aby se výsledná síť nepřizpůsobila až příliš moc trénovacím datům.
 		
 \section{Pohyb dat}
 	\subsection{Vstup}
+		\subsubsection{Typy vstupních dat}
+			\paragraph{Trénovací data}
+			jsou data u nichž používáme vstupy i výstupy pro vylepšování sítě. Pokud výsledná síť uvidí znovu tato data bude na nich mít mnohem lepší výsledky, jelikož je trénovaná speciálně na tyto data a až jako vedlejší produkt je tréning na data podobná.
+			\paragraph{Testovací data}
+			je soubor vstupů, u nichž je známý i výsledek. Ten ale nikdy není ukázán síti, slouží totiž pro porovnání výsledku sítě s pravidvým výsledkem. Takto získává uživatel statistiky o kvalitě sítě.
+			\paragraph{Produkční data}
+			jsou důvod proč síť vůbec programujeme. Tyto data dostává síť během běžného používání a počítá k nim výsledky. Není však možnost určit jak by tyto výsledky měli vyjít, a proto nám už zbývá pouze doufat, že síť funguje jak popisuje teorie.
 		\paragraph{Scaling}
 		je metoda upravení hodnot z našich vstupních dat, tak aby v síti tato data vystupovala pouze jako aktivace. Dobrým příkladem je vstupní hodnota věk. V našich datech se vyskytuje člověk s maximální věkem 100 a minimálním 0. Odpovídající hodnoty aktivace potom budou $100\rightarrow1.0$ a $0\rightarrow0.0$.
 	\subsection{Výstup}
+		\paragraph{Back-scaling}
+		je forma získání dat zpět z neuronové sítě. Pokud zrovna trénujeme, není nutné data získávat a pak je porovnávat s očekávanými výsledky, lepší způsob je očekávané výsledky převést na jazyk, kterým komunikuje síť. Tímto samozdřejmě myslím použít scaling a převést výsledek na hodnotu mezi nulou a jedničkou.
 	
-
+\chapter{Vstup}
+	\section{Design vstupní vrstvy}
+	\section{Scaling}
+	\section{Data}
+\chapter{Forward-propagation}
+	\section{Typy sítí}
+		\subsection{Normální}
+		\subsection{Deep learning}	
+\chapter{Back-propagation}
+	\section{Loss function}
+		
+\chapter{Praktická práce s PC}
+	\section{Jazyk}
+	Jako vývojový jazyk jsem si zvolil Python. Konkrétně používám verzi 3.6.3 na operačním systému Windows 7 64-bit. Tento jazyk jsem si zvolil především, protože je v oboru výrazně preferovaný. Tomu odpovídá i množství knihoven, které pro python v oblasti strojového učení vzniklo. 
+		\subsection{Vývojové prostředí}
+		Pro vývoj používám NotePad++. IDE zvýrazňuje klíčová slova ve většině jazyků a není komplikované.
+		\subsection{Knihovny}
+		Knihovny usnadňují práci s programem. Můžeme si je představit právě jako knihy z knihovny plné funkcí, které jsou většinou velmi jednoduché, ale i přes to vyžadují čas na vytvoření a organizaci zdrojových souborů. Navíc jsou dost často optimalizované na to co dělají.
+			\paragraph{NumPy}
+			poskytuje značné množství jednoduchých matematických operací a funkcí, ze kterých je strojové učení složené. Hlavní funkce je pro mne násobení matic, kterou je možné rychle vyhodnocovat forward-propagation.
+	\section{Git}
+		Pro zálohování a verzování používám Git.
 
 \chapter{Závěr}
 Toto je závěr mé ročníkové práce.
