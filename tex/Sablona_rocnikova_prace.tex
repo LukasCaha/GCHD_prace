@@ -90,10 +90,15 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 \chapter{Forward-propagation}
 	Je to právě tento postup, který nám umožňuje pracovat s neuoronovými sítěmi. V průběhu vývoje se snažíme, aby tato fáze proběhla co nejlépe. Je to totiž výpočet toho co si síť myslí. Když tedy spustíme forward-propagation na nějakých datech dostaneme na výstup pořád pár divných čísel, podobných těm co vzniknou scalováním. To můžeme ale jednoduše změnit back-scalingem, což nám poskytne opravdu výstup, jaký by se dal čekat od živé bytosti se slušným uvažováním. Tento výstup bude zezačátku pravděpodobně většinou chybný, ale postupem času a trénováním se dostaneme do body, kdy výsledky opravdu odpovídají realitě.
 	\section{Typy sítí}
-		\subsection{Normální}
-		\subsection{Deep learning}	
+	Při náhledu do lidského mozku asi nenajdeme takhle hezky uspořádané sítě z rovnocených neuronů. Stále však reprezentují dostatečně na to, aby to celé mohlo fungovat. Je dobré vědět, že existují i jiné typy sítí. Existují modifikace jenž umožňují pracovat s pamětí, vracejí již propočítaná data, nebo sami uspořádavají síť za běhu.
+		\subsection{Feed-forward}
+		Tento typ je asi nejjednoduší případ využití strojového učení. Veškerá data postupují organizovaně dále do sítě a na konci dosáhnou výsledných neuronů.
+		\subsection{Deep learning}
+		Od slova deep (hluboké) jsou tyto sítě používány na zpracování komplikovanějších dat, jako je například rozpoznávání znaků. Uvnitř mají totiž více vrstev a každá funguje jako vstupní vrstva pro další. Takto si můžou jednotivé vrstvy předpracovat data a vrstva s výstupem už jen posbírá skoro hotové výsledky.
 \chapter{Back-propagation}
+Použitím této metody můžeme síť opravdu něco naučit. Stručně řečeno si síť porovná výsledky s očekáváními a poté upraví váhy v síťi, tak aby nám další feed-forward fungoval trochu lépe.
 	\section{Loss function}
+	Celá síť je naprosto definovaná svým rozložením a vahami jednotlivých synapsí. Rozložení je fixní, takže pokud chceme ze sítě dostat maximum musíme upravovat váhy. Není však žádný jasný směr, kterým se vydat. Váh v síti je často od stovek k tisícům. Proto si zavedeme funkci loss neboli ztrátu. Tato funkce nám říká, jak moc je výsledek špatný. A najitím minimální hodnoty můžeme najít ideální stav sítě.
 		
 \chapter{Praktická práce s PC}
 	\section{Jazyk}
@@ -105,7 +110,7 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 			\paragraph{NumPy}
 			poskytuje značné množství jednoduchých matematických operací a funkcí, ze kterých je strojové učení složené. Hlavní funkce je pro mne násobení matic, kterou je možné rychle vyhodnocovat forward-propagation.
 	\section{Git}
-		Pro zálohování a verzování používám Git.
+		Pro zálohování a verzování používám Git. Konkrétně webovou službu GitHub.
 
 \chapter{Závěr}
 Toto je závěr mé ročníkové práce.

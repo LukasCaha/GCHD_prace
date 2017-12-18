@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {3.3.2}Testovac\IeC {\'\i }}{6}{subsection.3.3.2}
 \contentsline {chapter}{\numberline {4}Forward-propagation}{8}{chapter.4}
 \contentsline {section}{\numberline {4.1}Typy s\IeC {\'\i }t\IeC {\'\i }}{8}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Norm\IeC {\'a}ln\IeC {\'\i }}{8}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Feed-forward}{8}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Deep learning}{8}{subsection.4.1.2}
 \contentsline {chapter}{\numberline {5}Back-propagation}{9}{chapter.5}
 \contentsline {section}{\numberline {5.1}Loss function}{9}{section.5.1}
