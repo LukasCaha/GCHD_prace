@@ -77,9 +77,18 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 	
 \chapter{Vstup}
 	\section{Design vstupní vrstvy}
+		\subsection{Velikost vrstvy}
+		Do vstupní vrstvy musíme dát dostatečné množství neuronů, aby mohli obsáhnout všechny důležité informace. Pokud budu například používat jako data obrázky o velikosti 28x28px, tak vhodný počet vstupních neuronů je 784, takto neztratím žádná data a dokonce budou mít takhle všechny pixely rovnocený vliv. Pokud budu, ale používat jako data databázi s údaji o osobě, bude mi stačit neuronů zhruba stejný počet jako je sloupců v databázi.
 	\section{Scaling}
+	Jak již dobře víme, scaling je používán na získání hodnot mezi 0 a 1 ze vstupních dat. Našim vstupním číslům by síť totiž nemusela rozumět hned od začátku, jelikož se věk uvádí v řádu desítek, ale výplaty dosahují přibližně o 4 řády více. Až později pochopíme jak funguje teoretické učení sítě zjistíme, že se tomuto kroku můžeme vyhnout, avšak z praktických zkušeností pak usoudíme, že scaling je docela užitečný krok.
 	\section{Data}
+	U začátku designování a programování sítě stojí většinou nějaká data. Dříve u vymýšlení třídících algoritmů nám pomáhalo znát jak tato data vypadají. Tato znalost je u neuronových sítí naprosto zásadní. Budu-li trénovat síť míchat barvy musím opravdu dávat na vstup pravdivé výsledky míchání barev. Když se později poohlédneme za cestou od začátku do vytrénované sítě uvidíme, že dvě stejné sítě můžou být vytrénovány na dvě různé činnosti. Celkově bych to shnul upraveným příslovím: "Síť nepadá daleko od dat."
+		\subsection{Trénovací}
+		Tento pojem již známe. Pojďme se tedy podívat na příklad míchaní barev. Na trénovacích datech obzvlášť záleží. Musíme z existujících údajů tedy vybrat co nejvíc náhodně vzorky, jejichž smíchání bylo ovlivněno co nejvíce faktory. Jednoduše pokud si vyberu na trénovaní pouze temné barvy, nemůžu potom očekávat, že síť správně smíchá dvě světlé barvy.
+		\subsection{Testovací}
+		Právě na těchto datech se uvidí, zda byly dosavadní kroky provedené úspěšně. Dosavadnímy kroky myslím celý postup, jelikož testovací data přichází skoro až na konci vývoje sítě. Jsou to právě tyto data, která nám oznámí jak dobře jsme odvedli práci trénování.
 \chapter{Forward-propagation}
+	Je to právě tento postup, který nám umožňuje pracovat s neuoronovými sítěmi. V průběhu vývoje se snažíme, aby tato fáze proběhla co nejlépe. Je to totiž výpočet toho co si síť myslí. Když tedy spustíme forward-propagation na nějakých datech dostaneme na výstup pořád pár divných čísel, podobných těm co vzniknou scalováním. To můžeme ale jednoduše změnit back-scalingem, což nám poskytne opravdu výstup, jaký by se dal čekat od živé bytosti se slušným uvažováním. Tento výstup bude zezačátku pravděpodobně většinou chybný, ale postupem času a trénováním se dostaneme do body, kdy výsledky opravdu odpovídají realitě.
 	\section{Typy sítí}
 		\subsection{Normální}
 		\subsection{Deep learning}	
