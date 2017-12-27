@@ -20,7 +20,7 @@ def sigmoidList(list):
 def randomWeights(length,min,max):
 	weights = []
 	for i in range(0,length):
-		weights.insert(i,random.randint(min,max))
+		weights.insert(i,random.uniform(min,max))
 	return weights
 
 def forwardPropagation(inLayer,compLayer,outLayer,inToCompWeights,compToOutWeights):
