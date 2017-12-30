@@ -8,14 +8,14 @@ def min(list):
 	for index in range(0, len(list)):
 		if(list[index]<min):
 			min=list[index]
-	print(min)
+	return min
 	
 def max(list):
 	max = -sys.maxsize -1
 	for index in range(0, len(list)):
 		if(list[index]>max):
 			max=list[index]
-	print(max)
+	return max
 	
 def isPrime(number):
 	print(number)
@@ -27,3 +27,9 @@ def isPrime(number):
 		print(True)
 	else:
 		print(False)
+		
+def minLenTwo(list1,list2):
+	return min([len(list1),len(list2)])
+	
+def minLenThree(list1,list2,list3):
+	return min([len(list1),len(list2),len(list3)])
