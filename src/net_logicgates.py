@@ -14,8 +14,8 @@ inLayer = [0,0]
 compLayer = [0,0,0,0]
 outLayer = [0]
 #weights
-min = -0.5
-max = 0.5
+min = -1
+max = 1
 inToCompWeights = fp.randomWeights(len(inLayer)*len(compLayer),min,max)
 desiredInComp = []
 for d in range(0,len(inLayer)*len(compLayer)):
@@ -30,7 +30,7 @@ out = []
 cor = []
 lostStats = []
 #data
-d=0
+d=2
 if(d==0):
 	#XOR
 	inLayer1 = [1,1,0,0]
@@ -46,10 +46,15 @@ if(d==2):
 	inLayer1 = [1,1,0,0]
 	inLayer2 = [1,0,1,0]
 	outLayer1 = [1,0,0,0]
+if(d==3):
+	#random
+	inLayer1 = [1,1,0,0]
+	inLayer2 = [1,0,1,0]
+	outLayer1 = [1,0,0,0]
 	
 dataLen = bf.minLenThree(inLayer1,inLayer2,outLayer1)
 
-for counter in range (0,1000):
+for counter in range (0,100):
 	for d in range(0,len(inLayer)*len(compLayer)):
 		desiredInComp[d] = 0
 	for d in range(0,len(compLayer)*len(outLayer)):
@@ -64,21 +69,21 @@ for counter in range (0,1000):
 	#print(l.lossList(out,cor))
 	#backprop
 	for d in range(0,len(compLayer)*len(outLayer)):
-		desiredCompOut[d] -= (outLayer[0] - outLayer1[rnd]) * outLayer[0] * (1-outLayer[0])
+		desiredCompOut[d] += (outLayer[0] - outLayer1[rnd]) * outLayer[0] * (1-outLayer[0])
 	for i in range(0,len(inLayer)):
 		for c in range(0,len(compLayer)):
 		#desiredInComp[i*len(compLayer)+o] -= (compLayer[o] - (compLayer[o]+desiredCompOut[o])) #* inToCompWeights[i*len(compLayer)+o]
 			for o in range(0,len(outLayer)):
-				desiredInComp[i*len(compLayer)+c] -= desiredCompOut[c]*compToOutWeights[c]*(1-compLayer[c])*compLayer[c] #* inToCompWeights[i*len(compLayer)+o]
+				desiredInComp[i*len(compLayer)+c] += desiredCompOut[c]*compToOutWeights[c]*(1-compLayer[c])*compLayer[c] #* inToCompWeights[i*len(compLayer)+o]
 	if(counter%batch==0):
 		for d in range(0,len(compLayer)*len(outLayer)):
-			compToOutWeights[d] += desiredCompOut[d] * learnRate * compLayer[d]/ batch
+			compToOutWeights[d] += desiredCompOut[d] * learnRate/(counter+1) * compLayer[d]/ batch
 			if(compToOutWeights[d]>max):
 				compToOutWeights[d] = max 
 			if(compToOutWeights[d]<min):
 				compToOutWeights[d] = min 
 		for d in range(0,len(inLayer)*len(compLayer)):
-			inToCompWeights[d] += desiredInComp[d]* learnRate * inLayer[d % len(inLayer)]/ batch
+			inToCompWeights[d] += desiredInComp[d]* learnRate/(counter+1) * inLayer[d % len(inLayer)]/ batch
 			if(inToCompWeights[d]>max):
 				inToCompWeights[d] = max 
 			if(inToCompWeights[d]<min):

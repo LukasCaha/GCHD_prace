@@ -1,4 +1,5 @@
 import random
+import math
 
 def sumLayer(input,weights,outneurons):
 	output = []
@@ -10,7 +11,7 @@ def sumLayer(input,weights,outneurons):
 	return output
 
 def sigmoid(x):
-	return 1/(1+(2.71**-x))
+	return 1/(1+(math.e**-x))
 
 def sigmoidList(list):
 	for index in range(0,len(list)):
