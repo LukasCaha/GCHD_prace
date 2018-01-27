@@ -1,8 +1,9 @@
 #neural net data
-import fwdprop as fp
-import loss as l
+from lib import fwdprop as fp
+from lib import loss as l
+from lib import basicfunctions as bf
+
 import random as r
-import basicfunctions as bf
 import matplotlib.pyplot as plt
 
 
