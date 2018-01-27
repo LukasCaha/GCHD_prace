@@ -80,15 +80,17 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 		\subsection{Velikost vrstvy}
 		Do vstupní vrstvy musíme dát dostatečné množství neuronů, aby mohli obsáhnout všechny důležité informace. Pokud budu například používat jako data obrázky o velikosti $28\times 28$px, tak vhodný počet vstupních neuronů je 784, takto neztratím žádná data a dokonce budou mít takhle všechny pixely rovnocený vliv. Pokud budu, ale používat jako data databázi s údaji o osobě, bude mi stačit neuronů zhruba stejný počet jako je sloupců v databázi.
 	\section{Scaling}
-	Jak již dobře víme, scaling je používán na získání hodnot mezi 0 a 1 ze vstupních dat. Našim vstupním číslům by síť totiž nemusela rozumět hned od začátku, jelikož se věk uvádí v řádu desítek, ale výplaty dosahují přibližně o 4 řády více. Až později pochopíme jak funguje teoretické učení sítě zjistíme, že se tomuto kroku můžeme vyhnout, avšak z praktických zkušeností pak usoudíme, že scaling je docela užitečný krok.
+	Jak již dobře víme, scaling je používán na získání hodnot mezi 0 a 1 ze vstupních dat. Našim vstupním číslům by síť totiž nemusela rozumět hned od začátku, jelikož se věk uvádí v řádu desítek, ale výplaty dosahují přibližně o 4 řády více. Vlivy těchto vstupních hodnot budou značně odlišné, což způsobí nechtěné nepřesnosti. Až později pochopíme jak funguje teoretické učení sítě zjistíme, že se tomuto kroku můžeme vyhnout, avšak z praktických zkušeností pak usoudíme, že scaling je docela užitečný krok.
 	\section{Data}
-	U začátku designování a programování sítě stojí většinou nějaká data. Dříve u vymýšlení třídících algoritmů nám pomáhalo znát jak tato data vypadají. Tato znalost je u neuronových sítí naprosto zásadní. Budu-li trénovat síť míchat barvy musím opravdu dávat na vstup pravdivé výsledky míchání barev. Když se později poohlédneme za cestou od začátku do vytrénované sítě uvidíme, že dvě stejné sítě můžou být vytrénovány na dvě různé činnosti. Celkově bych to shnul upraveným příslovím: "Síť nepadá daleko od dat."
+	U začátku designování a programování sítě stojí vždy nějaká data. Každý trochu pokročilý programátor jistě dokáže vyjmenovat desítky případů, kdy mu znalost dat ulehčila práci. Tato znalost je u neuronových sítí naprosto zásadní. Když nevím co moje data znamenají nemůžu čekat, že to strojové učení odhadne za mě.
+	
+	Zároveň se musím postarat, abych použil data pravdivá, ve kterých se můžou opravdu existovat korelace, které můžu potvrdit letmou úvahou. Budu-li trénovat síť na míchání barev, musím použít reálné data o míchání barev. Kdybych si výsledné barvy vymýšlel náhodně můžu čekat, že odhady sítě budou také celkem náhodné. Když se později poohlédneme za cestou od začátku do vytrénované sítě uvidíme, že dvě stejné sítě můžou být vytrénovány na dvě různé činnosti. Celkově bych to shnul upraveným příslovím: "Síť nepadá daleko od dat."
 		\subsection{Trénovací}
 		Tento pojem již známe. Pojďme se tedy podívat na příklad míchaní barev. Na trénovacích datech obzvlášť záleží. Musíme z existujících údajů tedy vybrat co nejvíc náhodně vzorky, jejichž smíchání bylo ovlivněno co nejvíce faktory. Jednoduše pokud si vyberu na trénovaní pouze temné barvy, nemůžu potom očekávat, že síť správně smíchá dvě světlé barvy.
 		\subsection{Testovací}
-		Právě na těchto datech se uvidí, zda byly dosavadní kroky provedené úspěšně. Dosavadnímy kroky myslím celý postup, jelikož testovací data přichází skoro až na konci vývoje sítě. Jsou to právě tyto data, která nám oznámí jak dobře jsme odvedli práci trénování.
+		Právě na těchto datech se uvidí, zda byly dosavadní kroky provedené úspěšně. Dosavadnímy kroky myslím celý postup, jelikož testovací data přichází skoro až na konci vývoje sítě. Jsou to právě tyto data, která nám oznámí jak dobře jsme odvedli práci trénování. Pokud se však nenachází podobné korelace mezi trénovacími a testovacími daty, bude náš test sítě neúspěšný a budeme se muset vrátit zpět ke trénování.
 \chapter{Forward-propagation}
-	Je to právě tento postup, který nám umožňuje pracovat s neuoronovými sítěmi. V průběhu vývoje se snažíme, aby tato fáze proběhla co nejlépe. Je to totiž výpočet toho co si síť myslí. Když tedy spustíme forward-propagation na nějakých datech dostaneme na výstup pořád pár divných čísel, podobných těm co vzniknou scalováním. To můžeme ale jednoduše změnit back-scalingem, což nám poskytne opravdu výstup, jaký by se dal čekat od živé bytosti se slušným uvažováním. Tento výstup bude zezačátku pravděpodobně většinou chybný, ale postupem času a trénováním se dostaneme do body, kdy výsledky opravdu odpovídají realitě.
+	Je to právě tento postup, který nám umožňuje pracovat s neuoronovými sítěmi. V průběhu vývoje se snažíme, aby tato fáze proběhla co nejlépe. Je to totiž výpočet toho co si síť myslí. Když tedy spustíme forward-propagation na nějakých datech dostaneme na výstup pořád pár divných čísel, podobných těm co vzniknou scalováním. To můžeme ale jednoduše změnit back-scalingem, což nám poskytne opravdu výstup, jaký by se dal čekat od živé bytosti se slušným uvažováním. Tento výstup bude zezačátku pravděpodobně většinou chybný, ale postupem času a trénováním se dostaneme do bodu, kdy výsledky opravdu odpovídají realitě.
 	\section{Typy sítí}
 	Při náhledu do lidského mozku asi nenajdeme takhle hezky uspořádané sítě z rovnocených neuronů. Stále však reprezentují dostatečně na to, aby to celé mohlo fungovat. Je dobré vědět, že existují i jiné typy sítí. Existují modifikace jenž umožňují pracovat s pamětí, vracejí již propočítaná data, nebo sami uspořádavají síť za běhu.
 		\subsection{Feed-forward}
@@ -104,13 +106,25 @@ Použitím této metody můžeme síť opravdu něco naučit. Stručně řečeno
 	\section{Jazyk}
 	Jako vývojový jazyk jsem si zvolil Python. Konkrétně používám verzi 3.6.3 na operačním systému Windows 7 64-bit. Tento jazyk jsem si zvolil především, protože je v oboru výrazně preferovaný. Tomu odpovídá i množství knihoven, které pro python v oblasti strojového učení vzniklo. 
 		\subsection{Vývojové prostředí}
-		Pro vývoj používám NotePad++. IDE zvýrazňuje klíčová slova ve většině jazyků a není komplikované.
+		Pro vývoj používám prostředí Spyder, které již podle názvu "Scientific PYthon Development EnviRonment" bylo navrženo čistě pro práci s Pythonem. Dva nejdůležitější nástroje poskytnuté prostředím jsou IPython console a Variable explorer.
+		\paragraph{IPython console}
+		umožňuje mít program zapnutý po celou dobu práce s modelem neuronové sítě. Ze začátku se zapne Python kernel, do kterého postupně nahráváme řádky kódu a ty se vyhodnocují. Styl jakým se nejčastějí píše kód z tohoto nástroje velmi benefituje. Jednotlivé části kódu na sebe totiž navazují, a proto je píšeme postupně. S náhledem do již vyhodnocené části kódu se nám následující program bude psát i opravovat rychleji. Tento nástroj opravdu oceníme, až budeme chtít upravit výpis dlouho trénované neuronové sítě, bez nutnosti pouštět celý program znovu.
+		\paragraph{Variable explorer}
+		nám dovolí dívat se živě na proměnné, které v programu existují. Největší uplatnění je asi na začátku, když se snažíme dostat data ze souboru do vstupní vrstvy a můžeme se dívat v jaké fázi se zrovna nachází.
 		\subsection{Knihovny}
 		Knihovny usnadňují práci s programem. Můžeme si je představit právě jako knihy z knihovny plné funkcí, které jsou většinou velmi jednoduché, ale i přes to vyžadují čas na vytvoření a organizaci zdrojových souborů. Navíc jsou dost často optimalizované na to co dělají.
+			\paragraph{Pandas}
+			čte vstupní soubory a nahrává data do lehce čitelných proměnných.
 			\paragraph{NumPy}
-			poskytuje značné množství jednoduchých matematických operací a funkcí, ze kterých je strojové učení složené. Hlavní funkce je pro mne násobení matic, kterou je možné rychle vyhodnocovat forward-propagation.
+			poskytuje značné množství jednoduchých matematických operací a funkcí, ze kterých je strojové učení složené.
+			\paragraph{Scikit-learn}
+			je podstatná knihovna pro práci s daty. Do tohoto oboru spadají i neuronové sítě. Využívám ji na rozdělení dat na testovací a trénovací, a také pro určení chyby a účinosti vytrénované sítě.
+			\paragraph{Keras}
+			je velmi pokročilá knihovna určená přímo pro neuronové sítě. Běží na základě knihoven Tensorflow od Googlu a Theano. Umožní nám zaměřit se přímo na stavění sítí a modelů, místo toho, abychom všechno psali od začátku můžeme začít pouze s teoretickými znalostmi.
+			\paragraph{MatPlotLib}
+			není knihovna, co by se značně podílela na funkčnosti. Poskytuje nám však značné možnosti ve vykreslování statistických údajů pomocí grafů.
 	\section{Git}
-		Pro zálohování a verzování používám Git. Konkrétně webovou službu GitHub.
+		Pro zálohování a verzování používám Git. Konkrétně webovou službu GitHub (github.com/LukasCaha), kde se nachází veškerý kód asociovaný k této práci.
 
 \chapter{Závěr}
 Toto je závěr mé ročníkové práce.

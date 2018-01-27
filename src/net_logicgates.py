@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 #net settings
 learnRate = 0.01
-batch = 4
+batch = 1
 #layers
 inLayer = [0,0]
 compLayer = [0,0,0,0]
@@ -30,7 +30,7 @@ out = []
 cor = []
 lostStats = []
 #data
-d=2
+d=3
 if(d==0):
 	#XOR
 	inLayer1 = [1,1,0,0]

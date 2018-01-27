@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {3.2}Scaling}{6}{section.3.2}
 \contentsline {section}{\numberline {3.3}Data}{6}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Tr\IeC {\'e}novac\IeC {\'\i }}{6}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Testovac\IeC {\'\i }}{6}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Testovac\IeC {\'\i }}{7}{subsection.3.3.2}
 \contentsline {chapter}{\numberline {4}Forward-propagation}{8}{chapter.4}
 \contentsline {section}{\numberline {4.1}Typy s\IeC {\'\i }t\IeC {\'\i }}{8}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Feed-forward}{8}{subsection.4.1.1}
@@ -36,9 +36,15 @@
 \contentsline {chapter}{\numberline {6}Praktick\IeC {\'a} pr\IeC {\'a}ce s PC}{10}{chapter.6}
 \contentsline {section}{\numberline {6.1}Jazyk}{10}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}V\IeC {\'y}vojov\IeC {\'e} prost\IeC {\v r}ed\IeC {\'\i }}{10}{subsection.6.1.1}
+\contentsline {paragraph}{IPython console}{10}{section*.14}
+\contentsline {paragraph}{Variable explorer}{10}{section*.15}
 \contentsline {subsection}{\numberline {6.1.2}Knihovny}{10}{subsection.6.1.2}
-\contentsline {paragraph}{NumPy}{10}{section*.14}
-\contentsline {section}{\numberline {6.2}Git}{10}{section.6.2}
-\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{11}{chapter.7}
-\contentsline {chapter}{Literatura}{12}{chapter*.15}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{13}{chapter*.16}
+\contentsline {paragraph}{Pandas}{10}{section*.16}
+\contentsline {paragraph}{NumPy}{10}{section*.17}
+\contentsline {paragraph}{Scikit-learn}{11}{section*.18}
+\contentsline {paragraph}{Keras}{11}{section*.19}
+\contentsline {paragraph}{MatPlotLib}{11}{section*.20}
+\contentsline {section}{\numberline {6.2}Git}{11}{section.6.2}
+\contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{12}{chapter.7}
+\contentsline {chapter}{Literatura}{13}{chapter*.21}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{14}{chapter*.22}
