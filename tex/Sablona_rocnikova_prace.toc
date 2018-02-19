@@ -39,28 +39,30 @@
 \contentsline {section}{\numberline {5.1}Loss function}{13}{section.5.1}
 \contentsline {paragraph}{Kvadratick\IeC {\'a} ztr\IeC {\'a}tov\IeC {\'a} funkce}{13}{section*.22}
 \contentsline {section}{\numberline {5.2}Prakticky}{13}{section.5.2}
-\contentsline {chapter}{\numberline {6}Praktick\IeC {\'a} pr\IeC {\'a}ce s PC}{15}{chapter.6}
-\contentsline {section}{\numberline {6.1}Jazyk}{15}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}V\IeC {\'y}vojov\IeC {\'e} prost\IeC {\v r}ed\IeC {\'\i }}{15}{subsection.6.1.1}
-\contentsline {paragraph}{IPython console}{15}{section*.23}
-\contentsline {paragraph}{Variable explorer}{15}{section*.24}
-\contentsline {subsection}{\numberline {6.1.2}Knihovny}{15}{subsection.6.1.2}
-\contentsline {paragraph}{Pandas}{15}{section*.25}
-\contentsline {paragraph}{NumPy}{15}{section*.26}
-\contentsline {paragraph}{Scikit-learn}{16}{section*.27}
-\contentsline {paragraph}{Keras}{16}{section*.28}
-\contentsline {paragraph}{MatPlotLib}{16}{section*.29}
-\contentsline {section}{\numberline {6.2}Git}{16}{section.6.2}
-\contentsline {chapter}{\numberline {7}Konvolu\IeC {\v c}n\IeC {\'\i } p\IeC {\v r}edzpracov\IeC {\'a}n\IeC {\'\i }}{17}{chapter.7}
-\contentsline {section}{\numberline {7.1}Konvoluce}{17}{section.7.1}
-\contentsline {paragraph}{Konvoluce}{17}{section*.30}
-\contentsline {paragraph}{Vyu\IeC {\v z}it\IeC {\'\i }}{17}{section*.31}
-\contentsline {paragraph}{Velikost filteru}{17}{section*.32}
-\contentsline {paragraph}{Po\IeC {\v c}et filter\IeC {\r u}}{17}{section*.33}
-\contentsline {section}{\numberline {7.2}Sdru\IeC {\v z}ov\IeC {\'a}n\IeC {\'\i }}{17}{section.7.2}
-\contentsline {paragraph}{Sdru\IeC {\v z}ov\IeC {\'a}n\IeC {\'\i }}{17}{section*.34}
-\contentsline {paragraph}{Velikost poolu}{18}{section*.35}
-\contentsline {section}{\numberline {7.3}Vlo\IeC {\v z}en\IeC {\'\i } do s\IeC {\'\i }t\IeC {\v e}}{18}{section.7.3}
-\contentsline {chapter}{\numberline {8}Z\IeC {\'a}v\IeC {\v e}r}{19}{chapter.8}
-\contentsline {chapter}{Literatura}{20}{chapter*.36}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{21}{chapter*.37}
+\contentsline {chapter}{\numberline {6}Overfitting}{15}{chapter.6}
+\contentsline {section}{\numberline {6.1}\IeC {\v R}e\IeC {\v s}en\IeC {\'\i }}{15}{section.6.1}
+\contentsline {chapter}{\numberline {7}Doporu\IeC {\v c}en\IeC {\'\i } k programov\IeC {\'a}n\IeC {\'\i }}{16}{chapter.7}
+\contentsline {section}{\numberline {7.1}Jazyk}{16}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}V\IeC {\'y}vojov\IeC {\'e} prost\IeC {\v r}ed\IeC {\'\i }}{16}{subsection.7.1.1}
+\contentsline {paragraph}{IPython console}{16}{section*.23}
+\contentsline {paragraph}{Variable explorer}{16}{section*.24}
+\contentsline {subsection}{\numberline {7.1.2}Knihovny}{16}{subsection.7.1.2}
+\contentsline {paragraph}{Pandas}{16}{section*.25}
+\contentsline {paragraph}{NumPy}{16}{section*.26}
+\contentsline {paragraph}{Scikit-learn}{17}{section*.27}
+\contentsline {paragraph}{Keras}{17}{section*.28}
+\contentsline {paragraph}{MatPlotLib}{17}{section*.29}
+\contentsline {section}{\numberline {7.2}Git}{17}{section.7.2}
+\contentsline {chapter}{\numberline {8}Konvolu\IeC {\v c}n\IeC {\'\i } p\IeC {\v r}edzpracov\IeC {\'a}n\IeC {\'\i }}{18}{chapter.8}
+\contentsline {section}{\numberline {8.1}Konvoluce}{18}{section.8.1}
+\contentsline {paragraph}{Konvoluce}{18}{section*.30}
+\contentsline {paragraph}{Vyu\IeC {\v z}it\IeC {\'\i }}{18}{section*.31}
+\contentsline {paragraph}{Velikost filteru}{18}{section*.32}
+\contentsline {paragraph}{Po\IeC {\v c}et filter\IeC {\r u}}{18}{section*.33}
+\contentsline {section}{\numberline {8.2}Sdru\IeC {\v z}ov\IeC {\'a}n\IeC {\'\i }}{18}{section.8.2}
+\contentsline {paragraph}{Sdru\IeC {\v z}ov\IeC {\'a}n\IeC {\'\i }}{18}{section*.34}
+\contentsline {paragraph}{Velikost poolu}{19}{section*.35}
+\contentsline {section}{\numberline {8.3}Vlo\IeC {\v z}en\IeC {\'\i } do s\IeC {\'\i }t\IeC {\v e}}{19}{section.8.3}
+\contentsline {chapter}{\numberline {9}Z\IeC {\'a}v\IeC {\v e}r}{20}{chapter.9}
+\contentsline {chapter}{Literatura}{21}{chapter*.36}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{22}{chapter*.37}

@@ -5,7 +5,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{url}
+
 
 \setlength\parindent{0.5cm} % šířka odsazení prvního řádku odstavce
 \linespread{1.25} % řádkování 1.5 dle MS Word
@@ -197,12 +199,27 @@ Použitím této metody můžeme síť opravdu něco naučit. Stručně řečeno
 	Tímto postupem se můžu přiblížit k vytoužené síti, ale nevyužívám její plnou komplexitu. Proto můžu upravit i váhy v jiných vrstvách, než je mezi vstupní a první. Použiju úplně stejný postup. Pokud je neuron aktivovaný více nastavím váhu z něj do výstupů, co mají být aktivované trochu větší a do výstupů co mají být méně aktivované nastavím menší váhu.
 	
 	Během upravování všech vah používám významnou konstantu nazvanou "learning rate", která určuje, jak rychle se bude síť učit. Touto konstantou násobím všechny změny, jelikož rychlé změny v síti můžou způsobit zapomenutí informací, jenž se naučil dříve.
+
+\chapter{Overfitting}
+Po tom co síť vytrénujeme s velikou přesností nad $95\%$ na trénovacích datech, můžeme se radovat z velikého úspěchu. To ale není ještě výhra. Přesnost sítě se totiž musí hodnotit na datech testovacích. Během tréningu se totiž síť jako vedlejší produkt učí nazpaměť vstupy. Proto musíme v testu mít jiná data.
+
+To znamená, že pokud máme vysokou úspěšnost na tréningu, ale nízkou na testu jsme obětí overfittingu. Do lidského uvažování to můžu přeložit, jako že program usoudil, že mu nedáváme dostatek dat na zjištění souvislostí a tak se naučil všechny vstupní data nazpaměť. Samozřejmě to znamená, že pokud programu nechám vyhodnotit i jednoduchou úlohu, tak nám nebude schopen odpovědět, pokud už takový příklad neviděl.
+
+	\section{Řešení}
+	Na předejití overfittingu existuje několik triků. Nejlepší by bylo použít od každého alespoň trochu.
+	\begin{itemize}
+		\item Přidáním vzorových dat
+		\item Kontrolou, jestli jsou data relevantní
+		\item Odstraněním vstupních hodnot, které nemají velký vliv
+		\item Zastavením tréningu dřív, kdy test dosahuje dostatečně vysokých výsledků
+	\end{itemize}
 	
-\chapter{Praktická práce s PC}
+
+\chapter{Doporučení k programování}
 	\section{Jazyk}
-	Jako vývojový jazyk jsem si zvolil Python. Konkrétně používám verzi 3.6.3 na operačním systému Windows 7 64-bit. Tento jazyk jsem si zvolil především, protože je v oboru výrazně preferovaný. Tomu odpovídá i množství knihoven, které pro Python v oblasti strojového učení vzniklo. 
+	Jako vývojový jazyk jsem si zvolil Python. Konkrétně používám verzi 3.6.3 na operačním systému Windows 7 64-bit. Tento jazyk jsem si zvolil především, protože je v oboru výrazně preferovaný. Tomu odpovídá i množství knihoven, které pro Python v oblasti strojového učení vzniklo. Běh Pythonu není nejrychlejší, ale při odhadu úspory času na běhu u jiných jazyků zase ztrácím čas na psaní velkého množství kódu.
 		\subsection{Vývojové prostředí}
-		Pro vývoj používám prostředí Spyder, které již podle názvu "Scientific PYthon Development EnviRonment" bylo navrženo čistě pro práci s Pythonem. Dva nejdůležitější nástroje poskytnuté prostředím jsou IPython console a Variable explorer.
+		Pro vývoj používám prostředí Spyder, které již podle názvu "Scientific PYthon Development EnviRonment" bylo navrženo čistě pro práci s Pythonem. Dva nejdůležitější nástroje poskytnuté prostředím jsou IPython console a Variable explorer. Instalaci jsem provedl skrz Pythnovou platformu pro data science jménem Anaconda.
 		\paragraph{IPython console}
 		umožňuje mít program zapnutý po celou dobu práce s modelem neuronové sítě. Ze začátku se zapne Python kernel, do kterého postupně nahráváme řádky kódu a ty se vyhodnocují. Styl jakým se nejčastějí píše kód z tohoto nástroje velmi benefituje. Jednotlivé části kódu na sebe totiž navazují, a proto je píšeme postupně. S náhledem do již vyhodnocené části kódu se nám následující program bude psát i opravovat rychleji. Tento nástroj opravdu oceníme, až budeme chtít upravit výpis dlouho trénované neuronové sítě, bez nutnosti pouštět celý program znovu.
 		\paragraph{Variable explorer}
@@ -220,7 +237,7 @@ Použitím této metody můžeme síť opravdu něco naučit. Stručně řečeno
 			\paragraph{MatPlotLib}
 			není knihovna, co by se značně podílela na funkčnosti. Poskytuje nám však značné možnosti ve vykreslování statistických údajů pomocí grafů.
 	\section{Git}
-		Pro zálohování a verzování používám Git. Konkrétně webovou službu GitHub (github.com/LukasCaha), kde se nachází veškerý kód asociovaný k této práci.
+		Pro zálohování a verzování používám Git. Konkrétně webovou službu GitHub \url{github.com/LukasCaha/GCHD\_prace}, kde se nachází veškerý kód asociovaný k této práci.
 		
 \chapter{Konvoluční předzpracování}
 	Aplikováním následujícího postupu získáme vstupní hodnoty do neuronové sítě. Hlavní důvody, proč to děláme jsou rovnou dva. Prvním je přečtení souvislostí mezi jednotlivými pixely. Tato znalost je naprosto klíčová, protože jinak by se síť mohla zaměřit na výrazné, ale s obrázkem naprosto nesouvisející prvky (například šum v nočních snímcích). Druhým důvodem je zmenšení počtu informací, ale zachování informací rozhodujících pro správnou identifikaci obrázku. Tento postup nám tedy zrychlí zpracování bez ztráty kvality.
@@ -245,8 +262,17 @@ Použitím této metody můžeme síť opravdu něco naučit. Stručně řečeno
 		je nastavena tak, aby jsme neztratili příliš mnoho informací, ale aby program běžel dostatečně rychle. Obvykle je vhodná velikost $2\times2$. Můžeme samozřejmě použít mřížku $3\times3$. Obecně se ale doporučuje mít shodné rozměry.
 	\section{Vložení do sítě}
 		Nakonec vezmu všechny sdružené obrázky a poskládám je do jednorozměrného pole. Tohle pole je vstupní vrstva neuronové sítě, kterou již známe. Po dokončení trénování stačí vložit obrázek na začátek konvoluce a stejným postupem nám výjde odhad.
+		
 \chapter{Závěr}
-Toto je závěr mé ročníkové práce.
+Během psaní této práce jsem se naučil naprosté základy neuronových sítí a jejich fungování. Pro učení bych ze zkušeností doporučil četné video návody, které lze najít na internetu zcela zdarma. V rámci procvičování jsem vytvořil tři modely neuronových sítí s postupně se zvyšující složitostí.
+
+První program se učil souvislosti, které vytváří logické brány mezi vsupem a výstupem. Přesnost byla okolo $70\%$, což bylo způsobeno nedostatečnou složitostí problému a omezeností vstupních hodnot. \url{github.com/LukasCaha/GCHD_prace/blob/master/src/net_logicgates.py}
+
+Druhý pokus mířil trochu výš, kdy program určoval, zda jsou buňky v poli zaškrtnuté vertikálně symetricky. Vzhledem k jednoduchosti problému bylo jednoduché získat velký počet trénovacích a testovacích dat. To zapříčínilo úžasnou úspěšnost nad $99\%$ na testovacích datech. \url{github.com/LukasCaha/ANN_symetry}
+
+Poslední počin mířil na počítačovou vizi (computer vizion), kde je účelem rozpoznat, zda je na obrázku pes, nebo kočka. Tento problém mi zabral nejvíce času, jelikož jsem se potýkal s dlouhou výpočetní dobou programu. Po asi deseti hodinách se mi tréningem podařilo získat testovací úspěšnost $80\%$, což považuji za veliký úspěch, vzhledem k tomu jak byl problém komplexní. \url{github.com/LukasCaha/GCHD_prace/blob/master/src/cnn.py}
+
+
 
 %%% Seznam použité literatury
 \begin{thebibliography}{99}
