@@ -82,7 +82,7 @@ classifier.save_weights('weights.h5')
 
 import numpy as np
 from keras.preprocessing import image
-test_image = image.load_img('dataset/single_prediction/cat_or_dog_6.jpg', target_size = (64, 64))
+test_image = image.load_img('IMG_20180130_083902.jpg', target_size = (64, 64))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis = 0)
 result = classifier.predict(test_image)
@@ -93,6 +93,26 @@ else:
     prediction = 'cat'
     
     
+    
+import glob, os
+#move to predict dir
+counter = 0
+for file in glob.glob("*.jpg"):
+    counter = counter+1
+    print(file)
+    test_image = image.load_img(file, target_size = (64, 64))
+    test_image = image.img_to_array(test_image)
+    test_image = np.expand_dims(test_image, axis = 0)
+    result = classifier.predict(test_image)
+    training_set.class_indices
+    if result[0][0] == 1:
+        prediction = 'dog'+str(result)
+    else:
+        prediction = 'cat'+str(result)
+        
+    for filename in os.listdir("."):
+        if filename.startswith(file):
+            os.rename(filename, prediction+''+str(counter)+'.jpg')
     
 # CPU vs GPU benchmark
 """
