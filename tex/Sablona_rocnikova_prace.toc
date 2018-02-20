@@ -18,19 +18,20 @@
 \contentsline {section}{\numberline {2.3}Pohyb dat}{7}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Vstup}{7}{subsection.2.3.1}
 \contentsline {subsubsection}{Typy vstupn\IeC {\'\i }ch dat}{7}{section*.15}
-\contentsline {paragraph}{Tr\IeC {\'e}novac\IeC {\'\i } data}{7}{section*.16}
-\contentsline {paragraph}{Testovac\IeC {\'\i } data}{7}{section*.17}
+\contentsline {paragraph}{Tr\IeC {\'e}novac\IeC {\'\i } set}{7}{section*.16}
+\contentsline {paragraph}{Testovac\IeC {\'\i } set}{7}{section*.17}
 \contentsline {paragraph}{Produk\IeC {\v c}n\IeC {\'\i } data}{7}{section*.18}
 \contentsline {paragraph}{Scaling}{7}{section*.19}
-\contentsline {subsection}{\numberline {2.3.2}V\IeC {\'y}stup}{7}{subsection.2.3.2}
-\contentsline {paragraph}{Back-scaling}{7}{section*.20}
+\contentsline {subsection}{\numberline {2.3.2}V\IeC {\'y}stup}{8}{subsection.2.3.2}
+\contentsline {paragraph}{Back-scaling}{8}{section*.20}
 \contentsline {chapter}{\numberline {3}Vstup}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Design vstupn\IeC {\'\i } vrstvy}{9}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Velikost vrstvy}{9}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Scaling}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}Data}{9}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Tr\IeC {\'e}novac\IeC {\'\i }}{9}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Testovac\IeC {\'\i }}{10}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.3}Dummy variables}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Data}{9}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Tr\IeC {\'e}novac\IeC {\'\i }}{10}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Testovac\IeC {\'\i }}{10}{subsection.3.4.2}
 \contentsline {chapter}{\numberline {4}Forward-propagation}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Typy s\IeC {\'\i }t\IeC {\'\i }}{11}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Feed-forward}{11}{subsection.4.1.1}
