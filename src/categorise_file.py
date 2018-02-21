@@ -1,7 +1,6 @@
 from keras.models import load_model
 from keras.preprocessing import image
 
-
 # Load model
 classifier = load_model('classifierNEW')
 
