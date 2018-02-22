@@ -12,7 +12,7 @@
 
 \newcounter{prilohy}
 \newcommand{\priloha}[1]{\refstepcounter{prilohy}\label{#1}}
-\newcommand{\prilohaAdv}[3]{\noindent\priloha{#1} [\ref{#1}] \textbf{#2} - \url{#3}}
+\newcommand{\prilohaAdv}[3]{\noindent\priloha{#1} [\ref{#1}] \textbf{#2} -- \url{#3}}
 
 
 \setlength\parindent{0.5cm} % šířka odsazení prvního řádku odstavce
@@ -25,7 +25,7 @@
 % Jméno autora
 \def\AutorPrace{Lukáš Caha}
 % Třída autora
-\def\TridaAutora{8.M}
+\def\TridaAutora{8. M}
 % Školní rok
 \def\SkolniRok{2017/2018}
 % Seminář ve kterém práce vznikla
@@ -48,7 +48,7 @@
 \chapter{Úvod}
 Ve světě se nachází mnoho dat v mnoha podobách a v dnešní době se dostáváme do bodu, kdy nestačíme všechny třídit a využívat na plno.
 
-Neuronové sítě jsou vrcholem lidské práce v oblasti informačních technologií. Mohl bych je přirovnat k lidskému mozku. Důvodem, proč je zde zmiňuji je právě jejich všestrannost. Sítí můžeme pouštět dva typy dat. Jednak lidmi vyhodnocené, a poté nevyhodnocené, u nichž budu chtít výsledek. Neuronové sítě se podle prvního typu dat naučí, jaká je souvislost mezi vstupem a výstupem, a pak můžou přibližně určit výstupy dat druhého typu. Pokud byla v prvé řadě síť správně designovaná můžeme očekávat výsledky s poměrně velikou přesností a rychlostí zpracování, na jakou jsme zvyklí u počítačů.
+Neuronové sítě jsou vrcholem lidské práce v oblasti informačních technologií. Mohl bych je přirovnat k lidskému mozku. Důvodem, proč je zde zmiňuji je právě jejich všestrannost. Sítí můžeme pouštět dva typy dat. Jednak lidmi vyhodnocené, a poté nevyhodnocené, u nichž budu chtít výsledek. Neuronové sítě se podle prvního typu dat naučí, jaká je souvislost mezi vstupem a výstupem, a pak můžou přibližně určit výstupy dat druhého typu. Pokud byla v prvé řadě síť správně designovaná, můžeme očekávat výsledky s poměrně velikou přesností a rychlostí zpracování, na jakou jsme zvyklí u počítačů.
 
 Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i pro středoškoláky, kteří by chtěli začít se strojovým učením, což je obor zahrnující moderní způsoby práce s umělou inteligencí.
 
@@ -66,7 +66,7 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 		\subsubsection{Aktivační funkce}
 		Aktivační funkce upravuje příchozí signály tak, aby následně vytvořená hodnota zapadala do řádů ostatních jednotek. Přijdou-li do neuronu 4 signály, všechny s vysokou kladnou hodnotou, bude aktivace neuronu kladná a bude se blížit ostatním hodnotám vzniklým ze silných signálů.
 		\paragraph{Signum}
-		je nejzákladnější funkce, která může být pro tento úkol použita. Má všechny potřebné vlastnosti. Bohužel ztrácíme touto funkcí detail, který může být při tréningu sítě klíčový.
+		je nejzákladnější funkce, která může být pro tento úkol použita. Má všechny potřebné vlastnosti. Bohužel ztrácíme touto funkcí detail, který může být při tréninku sítě klíčový.
 		\paragraph{Sigmoid}
 		byla nejvíce používaná aktivační funkce na začátku vývoje neuronových sítí. Je také velice jednoduchá na pochopení. Dnes ji hlavně používáme pro určení pravděpodobností ve výstupní vrstvě, jelikož vrací pouze hodnoty v intervalu $\left<0,1\right>$.
 		\paragraph{Rectifier}
@@ -130,7 +130,7 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 \chapter{Vstup}
 	\section{Design vstupní vrstvy}
 		\subsection{Velikost vrstvy}
-		Do vstupní vrstvy musíme dát dostatečné množství neuronů, aby mohly obsáhnout všechny důležité informace. Pokud budu například používat jako data obrázky o velikosti $28\times 28$px, tak vhodný počet vstupních neuronů je 784. Takto neztratím žádná data, a dokonce budou mít takhle všechny pixely rovnocenný vliv. Pokud budu ale používat jako data databázi s údaji o osobě, bude mi stačit neuronů zhruba stejný počet jako je sloupců v databázi.
+		Do vstupní vrstvy musíme dát dostatečné množství neuronů, aby mohly obsáhnout všechny důležité informace. Pokud budu například používat jako data obrázky o velikosti $28\times 28$px, tak vhodný počet vstupních neuronů je 784. Takto neztratím žádná data, a dokonce budou mít takhle všechny pixely rovnocenný vliv. Pokud budu ale používat jako data databázi~s~údaji~o~osobě, bude mi stačit neuronů zhruba stejný počet jako je sloupců v databázi.
 	\section{Scaling}
 	Jak již dobře víme, scaling je používán na získání hodnot mezi 0 a 1 ze vstupních dat. Našim vstupním číslům by síť totiž nemusela rozumět hned od začátku, jelikož se věk uvádí v řádu desítek, ale výplaty dosahují přibližně o 4 řády více. Vlivy těchto vstupních hodnot budou značně odlišné, což způsobí nechtěné nepřesnosti. Až později pochopíme, jak funguje teoretické učení sítě zjistíme, že se tomuto kroku můžeme vyhnout, avšak z praktických zkušeností pak usoudíme, že scaling je docela užitečný krok.
 	\section{Dummy variables}
@@ -142,7 +142,7 @@ Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i 
 	
 	Většinu svých dat jsem získal skrz online kurz \cite{eremenko}.
 	
-	Zároveň se musím postarat, abych použil data pravdivá, ve kterých můžou opravdu existovat korelace, které můžu potvrdit letmou úvahou. Budu-li trénovat síť na míchání barev, musím použít reálná data o míchání barev. Kdybych si výsledné barvy vymýšlel náhodně můžu čekat, že odhady sítě budou také celkem náhodné. Když se později poohlédneme za cestou od začátku do vytrénované sítě, uvidíme, že dvě stejné sítě můžou být vytrénovány na dvě různé činnosti. Celkově bych to shrnul upraveným příslovím: "Síť nepadá daleko od dat."
+	Zároveň se musím postarat, abych použil data pravdivá, ve kterých můžou opravdu existovat korelace, které můžu potvrdit letmou úvahou. Budu-li trénovat síť na míchání barev, musím použít reálná data o míchání barev. Kdybych si výsledné barvy vymýšlel náhodně můžu čekat, že odhady sítě budou také celkem náhodné. Když se později poohlédneme za cestou od začátku do vytrénované sítě, uvidíme, že dvě stejné sítě můžou být vytrénovány na dvě různé činnosti. Celkově bych to shrnul upraveným příslovím: \uv{Síť nepadá daleko od dat.}
 		\subsection{Trénovací}
 		Tento pojem již známe. Pojďme se tedy podívat na příklad míchaní barev. Na trénovacích datech obzvlášť záleží. Musíme z existujících údajů tedy vybrat náhodně vzorky, jejichž smíchání bylo ovlivněno co nejvíce faktory. Jednoduše řečeno, pokud si vyberu na trénovaní pouze temné barvy, nemůžu potom očekávat, že síť správně smíchá dvě světlé barvy.
 		\subsection{Testovací}
@@ -195,7 +195,7 @@ Použitím této metody můžeme síť opravdu něco naučit. Stručně řečeno
 	\section{Loss function}
 	Celá síť je naprosto definovaná svým rozložením a vahami jednotlivých synapsí. Rozložení je fixní, takže pokud chceme ze sítě dostat maximum musíme upravovat váhy. Není však žádný jasný směr, kterým se vydat. Váh v síti je často od stovek k tisícům. Proto si zavedeme funkci loss neboli ztrátu. Tato funkce nám říká, jak moc je výsledek špatný. A najitím minimální hodnoty můžeme najít ideální stav sítě.
 	\paragraph{Kvadratická ztrátová funkce}
-	je nejčastěji používaná funkce. Její jednoduchost a lehká pochopitelnost jí staví nad všechny ostatní funkce, které můžou být pro určité případy lepší. $y$ je očekávaný výstup, $\hat{y}$ je vypočítaný výstup.
+	je nejčastěji používaná funkce. Její jednoduchost a lehká pochopitelnost jí staví nad všechny ostatní funkce, které můžou být pro určité případy lepší. Proměnná $y$ je očekávaný výstup, $\hat{y}$ je vypočítaný výstup.
 	$$L(y,\hat{y})=\frac{1}{2}(y-\hat{y})^2$$
 	V případě, že máme více výstupních neuronů, je $L$ rovna sumě jednotlivých ztrát neuronů. Lineární multiplikátor $\frac{1}{2}$ je zde pouze pro zjednodušení pozdější derivace.
 	
@@ -212,15 +212,15 @@ Použitím této metody můžeme síť opravdu něco naučit. Stručně řečeno
 	
 	Algoritmus v programu by mohl vypadat následovně:
 	\begin{enumerate}
-		\item V každém z neuronů $a_1$ až $a_m$ si vytvořím proměnnou $d=0$, do které budu zapisovat, jak chtějí neurony $b$, aby vypadala aktivace (její relativní změna)
-		\item Vezmu neuron $b_1$ a do proměnné $d_1$ neuronů $a_1$ až $a_m$ připíšu hodnotu váhy mezi neurony $d_1=d_1+w_{k,1}$
-		\item Opakuji pro neurony $b_2$ až $b_n$
+		\item V každém z neuronů $a_1$ až $a_m$ si vytvořím proměnnou $d=0$, do které budu zapisovat, jak chtějí neurony $b$, aby vypadala aktivace (její relativní změna).
+		\item Vezmu neuron $b_1$ a do proměnné $d_1$ neuronů $a_1$ až $a_m$ připíšu hodnotu váhy mezi neurony $d_1=d_1+w_{k,1}$.
+		\item Opakuji pro neurony $b_2$ až $b_n$.
 	\end{enumerate}
 	Tímto jsem do každého neuronu v předposlední vrstvě získal představu výstupní vrstvy o ideálním stavu pro tento vstup. Postup zopakuju pro všechny ostatní vrstvy, s tím, že současná předchozí vrstva se stane výstupní vrstvou. Když dojdeme k počítání vytoužených aktivací mezi vstupní vrstvou a první počítací vrstvou, nemůžeme už měnit nic jiného než váhy. Proto nastavím váhy tak, aby z aktivovaných vstupních neuronů byly kladné váhy do neuronů, co mají být aktivované a negativní váhy do neuronů co mají být vypnuté. Ze slabě aktivovaných vstupních neuronů nemusím měnit nic, protože nemají vliv na současnou situaci. Místo toho si je můžu ponechat pro jiné vstupní data, protože tam můžou mít vliv větší.
 	
 	Tímto postupem se můžu přiblížit k vytoužené síti, ale nevyužívám její plnou komplexitu. Proto můžu upravit i váhy v jiných vrstvách, než je mezi vstupní a první. Použiju úplně stejný postup. Pokud je neuron aktivovaný více nastavím váhu z něj do výstupů, co mají být aktivované trochu větší a do výstupů co mají být méně aktivované nastavím menší váhu.
 	
-	Během upravování všech vah používám významnou konstantu nazvanou "learning rate", která určuje, jak rychle se bude síť učit. Touto konstantou násobím všechny změny, jelikož rychlé změny v síti můžou způsobit zapomenutí informací, jenž se naučil dříve.
+	Během upravování všech vah používám významnou konstantu nazvanou \uv{learning rate}, která určuje, jak rychle se bude síť učit. Touto konstantou násobím všechny změny, jelikož rychlé změny v síti můžou způsobit zapomenutí informací, jenž se naučil dříve.
 	
 \chapter{Konvoluční předzpracování}
 Aplikováním následujícího postupu získáme vstupní hodnoty do neuronové sítě. Hlavní důvody, proč to děláme jsou rovnou dva. Prvním je přečtení souvislostí mezi jednotlivými pixely. Tato znalost je naprosto klíčová, protože jinak by se síť mohla zaměřit na výrazné, ale s obrázkem naprosto nesouvisející prvky (například šum v nočních snímcích). Druhým důvodem je zmenšení počtu informací, ale zachování informací rozhodujících pro správnou identifikaci obrázku. Tento postup nám tedy zrychlí zpracování bez ztráty kvality.
@@ -253,17 +253,17 @@ Nakonec vezmu všechny sdružené obrázky a poskládám je do jednorozměrného
 \end{figure}
 
 \chapter{Overfitting}
-Po tom, co síť vytrénujeme s velikou přesností nad $95\%$ na trénovacích datech, můžeme se radovat z velikého úspěchu. To ale není ještě výhra. Přesnost sítě se totiž musí hodnotit na datech testovacích. Během tréningu se totiž síť jako vedlejší produkt učí nazpaměť vstupy. Proto musíme v testu mít jiná data.
+Po tom, co síť vytrénujeme s velikou přesností nad $95\%$ na trénovacích datech, můžeme se radovat z velikého úspěchu. To ale není ještě výhra. Přesnost sítě se totiž musí hodnotit na datech testovacích. Během tréninku se totiž síť jako vedlejší produkt učí nazpaměť vstupy. Proto musíme v testu mít jiná data.
 
-To znamená, že pokud máme vysokou úspěšnost na tréningu, ale nízkou na testu jsme obětí overfittingu. Do lidského uvažování to můžu přeložit, jako že program usoudil, že mu nedáváme dostatek dat na zjištění souvislostí, a tak se naučil všechny vstupní data nazpaměť. Samozřejmě to znamená, že pokud programu nechám vyhodnotit i jednoduchou úlohu, tak nám nebude schopen odpovědět, pokud už takový příklad neviděl.
+To znamená, že pokud máme vysokou úspěšnost na tréninku, ale nízkou na testu jsme obětí overfittingu. Do lidského uvažování to můžu přeložit, jako že program usoudil, že mu nedáváme dostatek dat na zjištění souvislostí, a tak se naučil všechny vstupní data nazpaměť. Samozřejmě to znamená, že pokud programu nechám vyhodnotit i jednoduchou úlohu, tak nám nebude schopen odpovědět, pokud už takový příklad neviděl.
 
 	\section{Řešení}
-	Na předejití overfittingu existuje několik triků. Nejlepší by bylo použít od každého alespoň trochu.
+	Na předejití overfittingu existuje několik triků. Nejlepší by bylo použít od každého alespoň trochu
 	\begin{itemize}
-		\item Přidáním vzorových dat
-		\item Kontrolou, jestli jsou data relevantní
-		\item Odstraněním vstupních hodnot, které nemají velký vliv
-		\item Zastavením tréningu dřív, kdy test dosahuje dostatečně vysokých výsledků
+		\item přidáním vzorových dat;
+		\item kontrolou, jestli jsou data relevantní;
+		\item odstraněním vstupních hodnot, které nemají velký vliv;
+		\item zastavením tréninku dřív, kdy test dosahuje dostatečně vysokých výsledků.
 	\end{itemize}
 	
 
@@ -271,13 +271,13 @@ To znamená, že pokud máme vysokou úspěšnost na tréningu, ale nízkou na t
 	\section{Jazyk}
 	Jako vývojový jazyk jsem si zvolil Python. Konkrétně používám verzi 3.6.3 na operačním systému Windows 7 64-bit. Tento jazyk jsem si zvolil především, protože je v oboru výrazně preferovaný. Tomu odpovídá i množství knihoven, které pro Python v oblasti strojového učení vzniklo. Běh Pythonu není nejrychlejší, ale při odhadu úspory času na běhu u jiných jazyků zase ztrácím čas na psaní velkého množství kódu.
 		\subsection{Vývojové prostředí}
-		Pro vývoj používám prostředí Spyder, které již podle názvu "Scientific PYthon Development EnviRonment" bylo navrženo čistě pro práci s Pythonem. Dva nejdůležitější nástroje poskytnuté prostředím jsou IPython console a Variable explorer. Instalaci jsem provedl skrz Pythonovou platformu pro data science jménem Anaconda.
+		Pro vývoj používám prostředí Spyder, které již podle názvu \uv{Scientific PYthon Development EnviRonment} bylo navrženo čistě pro práci s Pythonem. Dva nejdůležitější nástroje poskytnuté prostředím jsou IPython console a Variable explorer. Instalaci jsem provedl skrz Pythonovou platformu pro data science jménem Anaconda.
 		\paragraph{IPython console}
 		umožňuje mít program zapnutý po celou dobu práce s modelem neuronové sítě. Ze začátku se zapne Python kernel, do kterého postupně nahráváme řádky kódu a ty se vyhodnocují. Styl, jakým se nejčastěji píše kód z tohoto nástroje velmi benefituje. Jednotlivé části kódu na sebe totiž navazují, a proto je píšeme postupně. S náhledem do již vyhodnocené části kódu se nám následující program bude psát i opravovat rychleji. Tento nástroj opravdu oceníme, až budeme chtít upravit výpis dlouho trénované neuronové sítě, bez nutnosti pouštět celý program znovu.
 		\paragraph{Variable explorer}
 		nám dovolí dívat se živě na proměnné, které v programu existují. Největší uplatnění je asi na začátku, když se snažíme dostat data ze souboru do vstupní vrstvy a můžeme se dívat v jaké fázi se zrovna nachází.
 		\subsection{Knihovny}
-		Knihovny usnadňují práci s programem. Můžeme si je představit právě jako knihy z knihovny plné funkcí, které jsou většinou velmi jednoduché, ale i přes to vyžadují čas na vytvoření a organizaci zdrojových souborů. Navíc jsou dost často optimalizované na to, co dělají.
+		Knihovny usnadňují práci s programem. Můžeme si je představit právě jako knihy z knihovny plné funkcí, které jsou většinou velmi jednoduché, ale i přes to vyžadují čas na vytvoření~a~organizaci zdrojových souborů. Navíc jsou dost často optimalizované na to, co dělají.
 			\paragraph{Pandas}
 			čte vstupní soubory a nahrává data do lehce čitelných proměnných.
 			\paragraph{NumPy}
@@ -295,7 +295,7 @@ To znamená, že pokud máme vysokou úspěšnost na tréningu, ale nízkou na t
 	\section{Platforma Anaconda}
 	\begin{enumerate}
 		\item Z webových stránek \url{https://www.anaconda.com/download/} stáhneme instalační program pro Python 3.6.
-		\item Pokračujeme instalací do konce metodou "mačkám Další".
+		\item Pokračujeme instalací do konce metodou \uv{mačkám Další}.
 	\end{enumerate}
 		\section{Knihovna Tensorflow}
 		\begin{enumerate}
@@ -359,7 +359,7 @@ První program se učil souvislosti, které vytváří logické brány mezi vstu
 
 Druhý pokus mířil trochu výš, kdy program určoval, zda jsou buňky v poli zaškrtnuté vertikálně symetricky. Vzhledem k jednoduchosti problému bylo jednoduché získat velký počet trénovacích a testovacích dat. To zapříčinilo úžasnou úspěšnost nad $99\%$ na testovacích datech. Rozšířené informace v příloze [\ref{sym}].
 
-Poslední počin mířil na počítačovou vizi (computer vizion), kde je účelem rozpoznat, zda je na obrázku pes, nebo kočka. Tento problém mi zabral nejvíce času, jelikož jsem se potýkal s dlouhou výpočetní dobou programu. Po asi deseti hodinách se mi tréningem podařilo získat testovací úspěšnost $80\%$, což považuji za veliký úspěch, vzhledem k tomu jak byl problém komplexní. Kód dostupný v příloze [\ref{cnn}].
+Poslední počin mířil na počítačovou vizi (computer vision), kde je účelem rozpoznat, zda je na obrázku pes, nebo kočka. Tento problém mi zabral nejvíce času, jelikož jsem se potýkal s dlouhou výpočetní dobou programu. Po asi deseti hodinách se mi tréninkem podařilo získat testovací úspěšnost $80\%$, což považuji za veliký úspěch, vzhledem k tomu jak byl problém komplexní. Kód dostupný v příloze [\ref{cnn}].
 
 
 %%% Seznam použité literatury
