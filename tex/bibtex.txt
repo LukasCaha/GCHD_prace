@@ -1,4 +1,4 @@
-@misc{kernix, title={A toy convolutional neural network for image classification with Keras}, url={https://www.kernix.com/blog/a-toy-convolutional-neural-network-for-image-classification-with-keras_p14}, journal={kernix}}
+@misc{kernix, title={A toy convolutional neural network for image classification with Keras\\ }, url={https://www.kernix.com/blog/a-toy-convolutional-neural-network-for-image-classification-with-keras_p14}, journal={kernix}}
 
 @misc{3blue1brown, title={Neural networks}, url={https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}, journal={YouTube}, publisher={YouTube}, author={3Blue1Brown}}
 

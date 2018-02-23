@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{url}
 \usepackage{listings}
+\usepackage{xcolor}
 
 
 \newcounter{prilohy}
@@ -46,9 +47,13 @@
 \tableofcontents
 
 \chapter{Úvod}
-Ve světě se nachází mnoho dat v mnoha podobách a v dnešní době se dostáváme do bodu, kdy nestačíme všechny třídit a využívat na plno.
+Ve světě se nachází mnoho dat v mnoha podobách a v dnešní době se dostáváme do 
+bodu, kdy nestačíme všechny třídit a využívat na plno.
 
-Neuronové sítě jsou vrcholem lidské práce v oblasti informačních technologií. Mohl bych je přirovnat k lidskému mozku. Důvodem, proč je zde zmiňuji je právě jejich všestrannost. Sítí můžeme pouštět dva typy dat. Jednak lidmi vyhodnocené, a poté nevyhodnocené, u nichž budu chtít výsledek. Neuronové sítě se podle prvního typu dat naučí, jaká je souvislost mezi vstupem a výstupem, a pak můžou přibližně určit výstupy dat druhého typu. Pokud byla v prvé řadě síť správně designovaná, můžeme očekávat výsledky s poměrně velikou přesností a rychlostí zpracování, na jakou jsme zvyklí u počítačů.
+Neuronové sítě jsou vrcholem lidské práce v oblasti informačních technologií.
+Mohl bych je přirovnat k lidskému mozku. Důvodem, proč je zde zmiňuji, je právě 
+jejich všestrannost. Sítí můžeme pouštět dva typy dat. Jednak lidmi vyhodnocené,
+a poté nevyhodnocené, u nichž budu chtít výsledek. Neuronové sítě se podle prvního typu dat naučí, jaká je souvislost mezi vstupem a výstupem, a pak můžou přibližně určit výstupy dat druhého typu. Pokud byla v prvé řadě síť správně designovaná, můžeme očekávat výsledky s poměrně velikou přesností a rychlostí zpracování, na jakou jsme zvyklí u počítačů.
 
 Touto prací bych chtěl rozebrat neuronové sítě na úroveň pochopitelnou i pro středoškoláky, kteří by chtěli začít se strojovým učením, což je obor zahrnující moderní způsoby práce s umělou inteligencí.
 
@@ -361,21 +366,22 @@ Druhý pokus mířil trochu výš, kdy program určoval, zda jsou buňky v poli 
 
 Poslední počin mířil na počítačovou vizi (computer vision), kde je účelem rozpoznat, zda je na obrázku pes, nebo kočka. Tento problém mi zabral nejvíce času, jelikož jsem se potýkal s dlouhou výpočetní dobou programu. Po asi deseti hodinách se mi tréninkem podařilo získat testovací úspěšnost $80\%$, což považuji za veliký úspěch, vzhledem k tomu jak byl problém komplexní. Kód dostupný v příloze [\ref{cnn}].
 
-
+\raggedright
 %%% Seznam použité literatury
 \bibliographystyle{abbrv}
 \bibliography{bibtex}
 
 %%% Prostor pro přílohy práce
 \chapwithtoc{Přílohy}
+\begin{enumerate}
+  \item[]\prilohaAdv{gchd}{GitHub repozitář této práce}{https://github.com/LukasCaha/GCHD_prace}
+  \item[]\prilohaAdv{sym}{Symetrie pole 4x4}{https://github.com/LukasCaha/ANN_symetry\\}
+  \item[]\prilohaAdv{cnn}{Rozpoznávání psů a koček}{https://github.com/LukasCaha/GCHD_prace/blob/master/src/cnn.py}
+  \item[]\prilohaAdv{logic}{Neuronové sítě na logických branách}{https://github.com/LukasCaha/GCHD_prace/blob/master/src/net_logicgates.py}
+\end{enumerate}
 
-\prilohaAdv{gchd}{GitHub repozitář této práce}{https://github.com/LukasCaha/GCHD_prace}
 
-\prilohaAdv{logic}{Neuronové sítě na logických branách}{https://github.com/LukasCaha/GCHD_prace/blob/master/src/net_logicgates.py}
 
-\prilohaAdv{sym}{Symetrie pole 4x4}{https://github.com/LukasCaha/ANN_symetry}
-
-\prilohaAdv{cnn}{Rozpoznávání psů a koček}{https://github.com/LukasCaha/GCHD_prace/blob/master/src/cnn.py}
 
 \openright
 \end{document}
