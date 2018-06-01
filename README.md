@@ -1,4 +1,4 @@
-﻿# Regresní neuronové sítě
+﻿# Klasifikační neuronové sítě
 Jednoduchý způsob jak se naučit pracovat s neuronovými sítěmi už na střední škole.
 ## Předpoklady
 * Jsem student střední školy, nebo mám odpovídající znalosti
